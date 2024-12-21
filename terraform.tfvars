@@ -1,0 +1,13 @@
+node_instance_type = "t2.micro"
+desired_capacity = "2"
+max_capacity = "3"
+min_capacity = "1"
+cluster_version = "1.27"
+cidr_range_group_a = "192.168.1.0/24"
+cidr_range_group_b = "192.168.2.0/24"
+vpc_name = "Dummy"
+vpc_cidr = "10.0.0.0/16"
+private_subnets = [ "10.0.3.0/24", "10.0.4.0/24" ]
+public_subnets = [ "10.0.1.0/24" ]
+bucket_name = "dummyservicebucket"
+region = "us-east-1"
