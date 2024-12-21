@@ -29,47 +29,52 @@ Execution Steps
 
 2. Initialize Terraform
         In the root directory, run:
+   
            $ terraform init
-        This initializes the working directory and downloads necessary provider plugins.
+   
+   This initializes the working directory and downloads necessary provider plugins.
 
-3. Validate the Terraform Code
+4. Validate the Terraform Code
         Ensure there are no syntax or configuration errors:
 
            $ terraform validate
 
-4. Create an Execution Plan
+5. Create an Execution Plan
         Preview the resources Terraform will create:
 
            $ terraform plan
-        Review the planned actions.
+   
+   Review the planned actions.
 
-5. Apply the Terraform Configuration
+7. Apply the Terraform Configuration
         Deploy the infrastructure:
 
            $ terraform apply
-        Type yes to confirm.
+   
+   Type yes to confirm.
 
-6. Verify EKS Cluster
+8. Verify EKS Cluster
     Update the kubectl configuration:
 
-    $ aws eks update-kubeconfig --region <region> --name <cluster-name>
+        $ aws eks update-kubeconfig --region <region> --name <cluster-name>
 
     Verify the cluster is reachable:
 
-    $ kubectl get svc
+        $ kubectl get svc
 
-7. Test Namespace and CIDR Ranges
+9. Test Namespace and CIDR Ranges
     Verify namespaces:
 
-    $ kubectl get namespaces
+        $ kubectl get namespaces
+   
     Confirm that the namespaces group-a and group-b are created.
 
-8. Verify S3 Bucket
+11. Verify S3 Bucket
     Check the S3 bucket in the AWS Management Console or use the CLI:
 
-    $ aws s3 ls
+        $ aws s3 ls
 
-9. Clean Up
+12. Clean Up
     To destroy all resources, use:
 
-    $ terraform destroy
+        $ terraform destroy
